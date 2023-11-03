@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carta</title>
+  <style>
+    body {
+      background-color: #252440; /* Cambia el color de fondo a un gris oscuro (#252440) */
+      font-family: Arial, sans-serif; /* Fuente más común y moderna */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    .container {
+      width: 60%;
+      max-width: 600px; /* Ancho máximo para mejorar la legibilidad */
+      padding: 20px;
+      text-align: left;
+      line-height: 1.5;
+      border: 2px solid #1db954; /* Borde de color verde de Spotify */
+      background: linear-gradient(to right, #191414, #333); /* Fondo más oscuro y moderno */
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      position: relative; /* Necesario para el posicionamiento de la imagen */
+    }
+
+    /* Estilo para los botones de reproducción y pausa */
+    .boton-musica {
+      background-color: #1db954; /* Color de fondo verde de Spotify */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s; /* Transición de color al pasar el mouse */
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    .boton-musica:hover {
+      background-color: #1ed760; /* Color de fondo verde claro al pasar el mouse */
+    }
+
+    /* Estilo para la imagen de la canción */
+    #imagen-cancion {
+      width: 150px; /* Ancho de la imagen */
+      position: absolute;
+      top: 30%; /* Centrar verticalmente */
+      left: 115%; /* Cambia la posición a la derecha del contenedor */
+      transform: translate(-50%, -50%); /* Ajustar al centro verticalmente */
+      border: 2px solid #1db954; /* Borde verde para la imagen */
+    }
+
+    /* Ajusta el margen derecho de los botones */
+    .boton-musica {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Imagen de la canción a la derecha del contenedor -->
+    <img id="imagen-cancion" src="1200x1200bf-60.jpg" alt="Portada del álbum">
+    
+    <h1>Hola que tal ?</h1>
+    <p>Espero que esta carta te encuentre bien. Quiero expresarte unas cosas.</p>
+  
+    <p>Si estoy tomando esto de manera equivocada espero que sepas que puedes decrime lo que sea que estes pensado.</p>
+  
+    <p>Entiendo que tu y yo somos tiempo pasado y tal vez en algun punto se que no queriamos que terminara asi pero creo que fue el momento y que en mi mente no se dejara de repetir la idea que seria la ultima "noche" la ultima pelea
+        contigo.</p>
+        <p>Los dos estuvimos mal en esto tu mas que yo eso lo entiendo pero yo nunca quise estar en una situacion o posicion asi pero el *nunca vamos a ser nada* fue un golpe de realidad que necesitaba para salir de ese ciclo.</p>
+  
+  
+    <p>Diculpame no fui sincero no quiero odiarte no quiero que me odies igual entiendo que no es excusa para como resulto todo nadie dijo que era facil es una lastima que nos separemos tampoco que seria tan duro verdad? .</p>
+    <p>Aunque puede que sea solo yo el que este pensado en todo y soñando con el pasado, es idiota de mi parte verdad? el tiempo que perdimos, es todo por culpa mia .</p> 
+    <p>con esto no quiero llegar a nada ni establecer algo creeme que sali de punto con lo que paso este ultimo mes verdaderamente me siento comodo con alguien y espero que tu tambien lo estes.</p>
+    <p>Con cariño (a mi manera),</p>
+</div>
+  
+  <!-- Botón de reproducción y pausa fuera del rectángulo -->
+  <button class="boton-musica" id="reproducir-btn" onclick="reproducirCancion()">Reproducir</button>
+  <button class="boton-musica" id="pausa-btn" onclick="pausarCancion()">Pausar</button>
+  
+  <audio id="miCancion" preload="auto">
+    <source src="y2mate.com - Seafret  Atlantis Official Video.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+  
+  <script>
+    function reproducirCancion() {
+      var miCancion = document.getElementById("miCancion");
+      miCancion.play();
+    }
+
+    function pausarCancion() {
+      var miCancion = document.getElementById("miCancion");
+      if (!miCancion.paused) {
+        miCancion.pause();
+      }
+    }
+  </script>
+</body>
+</html>
